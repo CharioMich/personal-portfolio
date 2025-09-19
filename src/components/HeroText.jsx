@@ -47,7 +47,7 @@ const HeroText = () => {
                 transition={{delay: 1, duration: 2}}
                 className="text-4xl font-medium">Hi, I'm Charalampos</motion.p>
             <div>
-                <p className="text-5xl font-black text-neutral-300">Building</p>
+                <p className="text-4xl font-black text-neutral-300">Building</p>
                 <div>
                     <FlipWords
                         words={words}
