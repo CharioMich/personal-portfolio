@@ -1,7 +1,9 @@
 import React from "react";
 import Navbar from "./sections/Navbar.jsx";
 import Hero from "./sections/Hero.jsx";
-import About from "./sections/About.jsx";
+import Projects from "./sections/Projects.jsx";
+import AboutMe from "./sections/AboutMe.jsx";
+import Contact from "./sections/Contact.jsx";
 
 const App = () => {
     return (
@@ -9,11 +11,9 @@ const App = () => {
             <div className="container mx-auto max-w-7xl">
                 <Navbar />
                 <Hero />
-                <About />
-                {/*<Projects />*/}
-                {/*<Experiences />*/}
-                {/*<Testimonial />*/}
-                {/*<Contact />*/}
+                <AboutMe />
+                <Projects />
+                <Contact />
                 {/*<Footer/>*/}
             </div>
         </>

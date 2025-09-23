@@ -1,6 +1,7 @@
 import { Menu, X} from "lucide-react";
 import {motion} from "motion/react"
 import {useState} from "react";
+import {ThemeToggler} from "../components/ThemeToggler.jsx";
 
 
 function Navigation() {
@@ -27,13 +28,17 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40">
+        <div className="fixed inset-x-0 z-20 w-full p-2 backdrop-blur-sm bg-transparent">
             <div className="mx-auto c-space max-w-7xl">
                 <div className="flex items-center justify-between py-2 sm:py-0">
-                    <a
-                        href="/"
-                        className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
-                    >Babis</a>
+                    <div>
+                        <ThemeToggler />
+                        {/*<a*/}
+                        {/*    href="/"*/}
+                        {/*    className="text-xl ml-4 font-bold transition-colors text-neutral-400 hover:text-white"*/}
+                        {/*>Babis</a>*/}
+                    </div>
+
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"

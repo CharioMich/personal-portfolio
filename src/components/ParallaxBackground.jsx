@@ -1,68 +1,83 @@
 import {motion, useScroll, useTransform, useSpring} from "motion/react";
+import { useMediaQuery } from "react-responsive";
 
 const ParallaxBackground = () => {
 
     const {scrollYProgress} = useScroll();
     const scrollSpring = useSpring(scrollYProgress, {damping: 50});
 
-    const mountain3Y = useTransform(scrollSpring, [0, 0.5], ["0%", "70%"]);
-    //      - scrollYProgress -- mountain3Y
+    const isMobile = useMediaQuery({ maxWidth: 800 });
+
+    const buildingX = useTransform(scrollSpring, [0, 0.8], ["0%", "-20%"]);
+    const building1Y = useTransform(scrollSpring, [0, 0.3], ["0%", "70%"]);
+    const building2Y = useTransform(scrollSpring, [0, 0.8], ["0%", "40%"]);
+    const building3Y = useTransform(scrollSpring, [0, 0.5], ["10%", "60%"]);
+    //      - scrollYProgress -- building3Y
     //      |       0          -     0%
     //      |       50         -     70%
-    const planetsX = useTransform(scrollSpring, [0, 0.5], ["0%", "-20%"]);
-    const mountain2Y = useTransform(scrollSpring, [0, 0.5], ["0%", "30%"]);
-    const mountain1Y = useTransform(scrollSpring, [0, 0.5], ["0%", "0%"]);
 
 
     return (
-        <section className="absolute inset-0 bg-black/40">
+        <section className="absolute inset-0 dark:bg-black/40">
             {/* Background */}
-            <div className="relative h-screen overflow-y-hidden">
-                {/*Background Sky*/}
+            <div className="relative h-screen overflow-y-hidden overflow-x-hidden">
+                {/*Background Image by masayuki-koyama*/}
                 <div
-                    className="absolute inset-0 w-full h-screen -z-50"
+                    className="absolute inset-0 w-full h-screen -z-50 shadow-md shadow-black"
                     style={{
-                        backgroundImage: `url(./src/assets/sky.jpg)`,
+                        backgroundImage: `url(./src/public/assets/masayuki-koyama.jpg)`,
                         backgroundPosition: `bottom`,
                         backgroundSize: `cover`,
                     }}
                 />
-                {/*Mountain Layer*/}
+                {/* Left floating building */}
                 <motion.div
+                    initial={{opacity: 0.5, x: -50}}
+                    animate={{opacity: 1, x: 0}}
+                    transition={{delay: 1, duration: 2}}
                     className="absolute inset-0 w-full h-screen -z-40"
                     style={{
-                        backgroundImage: `url(./src/assets/mountain-3.png)`,
-                        backgroundPosition: `bottom`,
-                        backgroundSize: `cover`,
-                        y: mountain3Y
+                        backgroundImage: `url(./src/public/assets/buildingLeft.png)`,
+                        backgroundPosition: `3% 50%`,
+                        backgroundSize: isMobile ? '40%' : `18%`,
+                        backgroundRepeat: `no-repeat`,
+                        x: buildingX
                     }}/>
-                {/*Planets*/}
-                <motion.div
-                    className="absolute inset-0 w-full h-screen -z-30"
-                    style={{
-                        backgroundImage: `url(./src/assets/planets.png)`,
-                        backgroundPosition: `bottom`,
-                        backgroundSize: `cover`,
-                        x: planetsX
-                    }}/>
-                {/*Mountain Layer 2*/}
+
+                {/* Right floating building */}
                 <motion.div
                     className="absolute inset-0 w-full h-screen -z-20"
                     style={{
-                        backgroundImage: `url(./src/assets/mountain-2.png)`,
-                        backgroundPosition: `bottom`,
-                        backgroundSize: `cover`,
-                        y: mountain2Y
+                        backgroundImage: `url(./src/public/assets/buildingRight.png)`,
+                        backgroundPosition: `65% 42%`,
+                        backgroundSize: isMobile ? '0%' : '20%',
+                        backgroundRepeat: `no-repeat`,
+                        y: building3Y
                     }}/>
-                {/*Mountain Layer 1*/}
+                {/* Right popping up buildings */}
                 <motion.div
-                    className="absolute inset-0 w-full h-screen -z-10"
+                    className="absolute inset-0 w-full h-screen -z-20"
                     style={{
-                        backgroundImage: `url(./src/assets/mountain-1.png)`,
-                        backgroundPosition: `bottom`,
-                        backgroundSize: `cover`,
-                        y: mountain1Y
+                        backgroundImage: `url(./src/public/assets/buildingWelcome.png)`,
+                        backgroundPosition: `105% 100%`,
+                        backgroundSize: isMobile? '40%' :`15%`,
+                        backgroundRepeat: `no-repeat`,
+                        y: building1Y
                     }}/>
+                <motion.div
+                    className="absolute inset-0 w-full h-screen -z-20"
+                    style={{
+                        backgroundImage: `url(./src/public/assets/building1.png)`,
+                        backgroundPosition: `96% 130%`,
+                        backgroundSize: isMobile? '40%' :`15%`,
+                        backgroundRepeat: `no-repeat`,
+                        y: building2Y
+                    }}/>
+                {/* Fade Overlay */}
+                <div className="absolute inset-0 h-screen -z-10
+                bg-gradient-to-b
+                from-transparent via-transparent to-gray-200
+                dark:from-transparent dark:via-transparent dark:via-primary dark:to-midnight" />
             </div>
         </section>
     )
