@@ -49,12 +49,12 @@ const HeroText = () => {
             </div>
         </div>
         {/*    Mobile View     */}
-        <div className="flex flex-col space-6 md:hidden">
+        <div className="flex flex-col space-6 md:hidden [text-shadow:_3px_2px_15px_rgba(0,0,0)]">
             <motion.p
                 initial={{opacity: 0, y: -50}}
                 animate={{opacity: 1, y: 0}}
                 transition={{delay: 1, duration: 2}}
-                className="text-4xl font-medium">Hi, I'm Charalampos</motion.p>
+                className="text-4xl text-white font-extrabold">Hi, I'm Charalampos</motion.p>
             <div>
                 <p className="text-4xl font-black text-neutral-300">Building</p>
                 <div>
