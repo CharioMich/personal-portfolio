@@ -8376,91 +8376,91 @@
   ],
   "images": [
     {
-      "uri": "textures/Eye1_baseColor.jpeg"
+      "uri": "textures/Eye1_baseColor.webp"
     },
     {
-      "uri": "textures/Eye1_metallicRoughness.png"
+      "uri": "textures/Eye1_metallicRoughness.webp"
     },
     {
-      "uri": "textures/Eye1_normal.png"
+      "uri": "textures/Eye1_normal.webp"
     },
     {
-      "uri": "textures/EyeBloom1_baseColor.jpeg"
+      "uri": "textures/EyeBloom1_baseColor.webp"
     },
     {
-      "uri": "textures/EyeBloom1_metallicRoughness.png"
+      "uri": "textures/EyeBloom1_metallicRoughness.webp"
     },
     {
-      "uri": "textures/Head_Metal1_baseColor.jpeg"
+      "uri": "textures/Head_Metal1_baseColor.webp"
     },
     {
-      "uri": "textures/Head_Metal1_metallicRoughness.png"
+      "uri": "textures/Head_Metal1_metallicRoughness.webp"
     },
     {
-      "uri": "textures/Head_Metal1_normal.png"
+      "uri": "textures/Head_Metal1_normal.webp"
     },
     {
-      "uri": "textures/Galler1_baseColor.jpeg"
+      "uri": "textures/Galler1_baseColor.webp"
     },
     {
-      "uri": "textures/Galler1_metallicRoughness.png"
+      "uri": "textures/Galler1_metallicRoughness.webp"
     },
     {
-      "uri": "textures/Galler1_normal.png"
+      "uri": "textures/Galler1_normal.webp"
     },
     {
-      "uri": "textures/Plasic_Arm2_baseColor.jpeg"
+      "uri": "textures/Plasic_Arm2_baseColor.webp"
     },
     {
-      "uri": "textures/Plasic_Arm2_metallicRoughness.png"
+      "uri": "textures/Plasic_Arm2_metallicRoughness.webp"
     },
     {
-      "uri": "textures/Plasic_Arm2_normal.png"
+      "uri": "textures/Plasic_Arm2_normal.webp"
     },
     {
-      "uri": "textures/Metal_Arm2_baseColor.jpeg"
+      "uri": "textures/Metal_Arm2_baseColor.webp"
     },
     {
-      "uri": "textures/Metal_Arm2_metallicRoughness.png"
+      "uri": "textures/Metal_Arm2_metallicRoughness.webp"
     },
     {
-      "uri": "textures/Metal_Arm2_normal.png"
+      "uri": "textures/Metal_Arm2_normal.webp"
     },
     {
-      "uri": "textures/Tourso-plastic1_baseColor.jpeg"
+      "uri": "textures/Tourso-plastic1_baseColor.webp"
     },
     {
-      "uri": "textures/Tourso-plastic1_metallicRoughness.png"
+      "uri": "textures/Tourso-plastic1_metallicRoughness.webp"
     },
     {
-      "uri": "textures/Tourso-plastic1_normal.png"
+      "uri": "textures/Tourso-plastic1_normal.webp"
     },
     {
-      "uri": "textures/Torsue_Metal1_baseColor.jpeg"
+      "uri": "textures/Torsue_Metal1_baseColor.webp"
     },
     {
-      "uri": "textures/Torsue_Metal1_metallicRoughness.png"
+      "uri": "textures/Torsue_Metal1_metallicRoughness.webp"
     },
     {
-      "uri": "textures/Torsue_Metal1_normal.png"
+      "uri": "textures/Torsue_Metal1_normal.webp"
     },
     {
-      "uri": "textures/Plast_Leg1_baseColor.jpeg"
+      "uri": "textures/Plast_Leg1_baseColor.webp"
     },
     {
-      "uri": "textures/Plast_Leg1_metallicRoughness.png"
+      "uri": "textures/Plast_Leg1_metallicRoughness.webp"
     },
     {
-      "uri": "textures/Plast_Leg1_normal.png"
+      "uri": "textures/Plast_Leg1_normal.webp"
     },
     {
-      "uri": "textures/Metal_Leg1_baseColor.jpeg"
+      "uri": "textures/Metal_Leg1_baseColor.webp"
     },
     {
-      "uri": "textures/Metal_Leg1_metallicRoughness.png"
+      "uri": "textures/Metal_Leg1_metallicRoughness.webp"
     },
     {
-      "uri": "textures/Metal_Leg1_normal.png"
+      "uri": "textures/Metal_Leg1_normal.webp"
     }
   ],
   "materials": [
