@@ -66,7 +66,7 @@ const EvervaultCard = ({
                             sizeClasses[size].circle
                         )}
                     >
-                        <div className="absolute w-full h-full bg-sky-300/30 dark:bg-gray-700/40 blur-sm rounded-full" />
+                        <div className="absolute w-full h-full bg-blue-300/30 dark:bg-gray-700/40 blur-sm rounded-full" />
                         <span className="dark:text-white text-black z-20 text-center">{text}</span>
                     </div>
                 </div>

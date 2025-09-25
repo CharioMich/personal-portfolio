@@ -3,9 +3,8 @@
 
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "./CardContainer.jsx";
-import GitHubLinkComponent from "@/components/GitHubLinkComponent.jsx";
 
-export function ThreeDCard({children, imgSrc}) {
+export function ThreeDCard({children, imgSrc, title, description}) {
 
     return (
         <CardContainer>
@@ -14,13 +13,13 @@ export function ThreeDCard({children, imgSrc}) {
                 <CardItem
                     translateZ="50"
                     className="text-xl font-bold text-neutral-600 dark:text-white">
-                    School API Java Spring Boot
+                    {title}
                 </CardItem>
                 <CardItem
                     as="p"
                     translateZ="60"
                     className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                    A RESTful api providing CRUD operations for teacher-users with JWT authentication
+                    {description}
                 </CardItem>
                 <CardItem translateZ="100" rotateX={20} rotateZ={-10} className="w-full mt-4">
                     <img
