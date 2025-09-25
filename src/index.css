@@ -25,6 +25,11 @@ canvas {
     --animate-orbit: orbit 50s linear infinite;
 
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     @apply bg-gray-200;
     color: var(--color-navy);
@@ -48,6 +53,7 @@ body {
 
 .section-spacing {
     @apply min-h-screen mt-20 md:mt-30;
+    scroll-margin-top: 5rem;
 }
 
 .text-heading {
@@ -74,6 +80,11 @@ body {
 .nav-link {
     @apply text-lg md:text-base hover:text-white transition-colors;
 }
+
+.active {
+    color: white !important;
+}
+
 /* Button Components */
 .btn {
     @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden;
