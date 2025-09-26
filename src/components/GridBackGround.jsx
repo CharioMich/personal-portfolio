@@ -4,7 +4,7 @@ import React from "react";
 export default function GridBackground({children}) {
     return (
         <div
-            className="relative flex h-full w-full items-center justify-center p-4 bg-gray-200 dark:bg-[#030412]">
+            className="relative flex h-full w-full items-center justify-center pt-10 bg-gray-200 dark:bg-[#030412]">
             <div
                 className={cn(
                     "absolute inset-0",

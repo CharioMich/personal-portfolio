@@ -12,8 +12,8 @@ import Loader from "../components/Loader.jsx";
 import {useMediaQuery} from "react-responsive";
 import {easing} from "maath";
 import EvervaultCard from "../components/EvervaultCard.jsx";
-import {BackgroundBeamsWithCollision} from "@/components/BackgroundBeamsWithCollision.jsx";
 import GridBackground from "@/components/GridBackGround.jsx";
+import {AnimatedTooltip} from "@/components/AnimatedToolTip.jsx";
 
 
 const AboutMe = () => {
@@ -21,11 +21,52 @@ const AboutMe = () => {
     const isMobile = useMediaQuery({maxWidth: 768});
     const robotRef = useRef();
 
+    const techStack = [
+        {
+            id: 1,
+            name: "Jon Doe",
+            designation: "Software Engineer",
+            image: "https://skillicons.dev/icons?i=java&theme=light",
+        },
+        {
+            id: 2,
+            name: "Robert Johnso",
+            designation: "Product Manager",
+            image: "https://skillicons.dev/icons?i=nodejs&theme=light",
+        },
+        {
+            id: 3,
+            name: "John Doe",
+            designation: "Software Engineer",
+            image: "https://skillicons.dev/icons?i=java&theme=light",
+        },
+        {
+            id: 4,
+            name: "Robert Johnson",
+            designation: "Product Manager",
+            image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+        },
+        {
+            id: 5,
+            name: "John Do",
+            designation: "Software Engineer",
+            // image: "https://skillicons.dev/icons?i=java&theme=light",
+        },
+        {
+            id: 6,
+            name: "Robert Johnsn",
+            designation: "Product Manager",
+            // image: "https://skillicons.dev/icons?i=nodejs&theme=light",
+        },
+    ];
+
     return (
         <>
             <section id="about" className="min-h-screen overflow-hidden c-space section-spacing">
+                <h2 className="text-heading">About Me</h2>
+                <hr className="border-gray-300 dark:border-gray-500 mt-10" />
                 <GridBackground>
-                    <div className="flex flex-col md:flex-row z-20">
+                    <div className="flex flex-col md:flex-row items-start z-20">
                         <motion.div
                             className="space-y-4 mb-10"
                             initial={{opacity: 0, x: -100}}
@@ -33,8 +74,28 @@ const AboutMe = () => {
                             viewport={{amount: 0.3}}
                             transition={{duration: 2}}
                         >
-                            <h2 className="text-heading">About Me</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi autem consequatur cumque distinctio dolorem doloremque facilis illum iure labore molestias, nemo nesciunt perferendis possimus qui, sed sint sit tenetur.</p>
+
+                            <p className="mt-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi autem consequatur cumque distinctio dolorem doloremque facilis illum iure labore molestias, nemo nesciunt perferendis possimus qui, sed sint sit tenetur.</p>
+                            <h2 className="text-3xl mt-15">Tech Stack</h2>
+                            {/* Tech Stack */}
+                            <div className="flex flex-row md:flex-col align-left mt-10">
+                                {/* Frontend */}
+                                <p>Frontend</p>
+                                <div className="flex flex-col md:flex-row items-center justify-start mb-10 mt-3 w-full">
+                                    <AnimatedTooltip items={techStack}/>
+                                </div>
+                                {/* Backend */}
+                                <p>Backend</p>
+                                <div className="flex flex-col md:flex-row items-center justify-start mb-10 mt-3 w-full">
+                                    <AnimatedTooltip items={techStack}/>
+                                </div>
+                                {/* Other */}
+                                <p>Other</p>
+                                <div className="flex flex-col md:flex-row items-center justify-start mb-10 mt-3 w-full">
+                                    <AnimatedTooltip items={techStack}/>
+                                </div>
+                            </div>
+
                         </motion.div>
                         {/* Model */}
                         <motion.div
@@ -74,7 +135,7 @@ const AboutMe = () => {
 
 
                 <motion.h2
-                    className="font-bold text-2xl md:text-3xl text-center"
+                    className="font-bold mt-4 text-2xl md:text-3xl text-center"
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
                     viewport={{amount: 1}}
