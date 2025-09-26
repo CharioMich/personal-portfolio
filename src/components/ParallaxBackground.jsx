@@ -8,10 +8,10 @@ const ParallaxBackground = () => {
 
     const isMobile = useMediaQuery({ maxWidth: 800 });
 
-    const buildingX = useTransform(scrollSpring, [0, 0.8], ["0%", "-20%"]);
+    const buildingX = useTransform(scrollSpring, [0, 0.8], ["0%", "-50%"]);
     const building1Y = useTransform(scrollSpring, [0, 0.3], ["0%", "70%"]);
     const building2Y = useTransform(scrollSpring, [0, 0.8], ["0%", "40%"]);
-    const building3Y = useTransform(scrollSpring, [0, 0.5], ["10%", "60%"]);
+    const building3Y = useTransform(scrollSpring, [0, 0.5], ["10%", "80%"]);
     //      - scrollYProgress -- building3Y
     //      |       0          -     0%
     //      |       50         -     70%
