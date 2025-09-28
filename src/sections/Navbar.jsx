@@ -145,7 +145,7 @@ export default function Navbar() {
     };
 
     return (
-        <div ref={navRef} className="fixed inset-x-0 z-20 w-full p-2 backdrop-blur-sm bg-transparent">
+        <div ref={navRef} className="fixed inset-x-0 z-200 w-full p-2 backdrop-blur-sm bg-transparent">
             <div className="mx-auto c-space max-w-7xl">
                 <div className="flex items-center justify-between py-2 sm:py-0">
                     <div>
@@ -154,7 +154,7 @@ export default function Navbar() {
 
                     <button
                         onClick={() => setIsOpen((v) => !v)}
-                        className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
+                        className="flex cursor-pointer text-neutral-400 hover:text-black dark:hover:text-white focus:outline-none sm:hidden"
                         aria-label="toggle menu"
                     >
                         {isOpen ? <X /> : <Menu />}

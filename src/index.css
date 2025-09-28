@@ -74,16 +74,18 @@ body {
 }
 
 .nav-li {
-    @apply text-neutral-400 hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+    @apply text-neutral-400 hover:text-black dark:hover:text-white max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
 }
 
 .nav-link {
-    @apply text-lg md:text-base hover:text-white transition-colors;
+    @apply text-lg md:text-base hover:text-black dark:hover:text-white transition-colors;
 }
 
 .active {
-    color: white !important;
+    /*color: white !important;*/
+    @apply text-black dark:text-white;
 }
+
 
 /* Button Components */
 .btn {
