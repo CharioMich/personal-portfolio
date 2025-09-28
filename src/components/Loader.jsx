@@ -4,7 +4,7 @@ const Loader = () => {
     const { progress } = useProgress();
     return (
         <Html center className="text-xl font-normal text-center">
-            {Math.round(progress)}% Loaded
+            {progress.toFixed(0)}% Loaded
         </Html>
     );
 };
