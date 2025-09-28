@@ -1,4 +1,4 @@
-import {Suspense, useRef} from "react";
+import React, {Suspense, useRef} from "react";
 import { motion } from "motion/react"
 
 // 3D Model Imports
@@ -15,50 +15,14 @@ import EvervaultCard from "../components/EvervaultCard.jsx";
 import GridBackground from "@/components/GridBackGround.jsx";
 import {AnimatedTooltip} from "@/components/AnimatedToolTip.jsx";
 
+// Tech Stack Icons Lists
+import {frontTechStack, backTechStack, otherTechStack} from "@/public/assets/techIconsLists.js";
+
 
 const AboutMe = () => {
 
     const isMobile = useMediaQuery({maxWidth: 768});
     const robotRef = useRef();
-
-    const techStack = [
-        {
-            id: 1,
-            name: "Jon Doe",
-            designation: "Software Engineer",
-            image: "https://skillicons.dev/icons?i=java&theme=light",
-        },
-        {
-            id: 2,
-            name: "Robert Johnso",
-            designation: "Product Manager",
-            image: "https://skillicons.dev/icons?i=nodejs&theme=light",
-        },
-        {
-            id: 3,
-            name: "John Doe",
-            designation: "Software Engineer",
-            image: "https://skillicons.dev/icons?i=java&theme=light",
-        },
-        {
-            id: 4,
-            name: "Robert Johnson",
-            designation: "Product Manager",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-        },
-        {
-            id: 5,
-            name: "John Do",
-            designation: "Software Engineer",
-            // image: "https://skillicons.dev/icons?i=java&theme=light",
-        },
-        {
-            id: 6,
-            name: "Robert Johnsn",
-            designation: "Product Manager",
-            // image: "https://skillicons.dev/icons?i=nodejs&theme=light",
-        },
-    ];
 
     return (
         <>
@@ -66,37 +30,61 @@ const AboutMe = () => {
                 <h2 className="text-heading">About Me</h2>
                 <hr className="border-gray-300 dark:border-gray-500 mt-10" />
                 <GridBackground>
-                    <div className="flex flex-col md:flex-row items-start z-20">
-                        <motion.div
-                            className="space-y-4 mb-10"
-                            initial={{opacity: 0, x: -100}}
-                            whileInView={{opacity: 1, x: 0}}
-                            viewport={{amount: 0.3}}
-                            transition={{duration: 2}}
-                        >
-
-                            <p className="mt-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi autem consequatur cumque distinctio dolorem doloremque facilis illum iure labore molestias, nemo nesciunt perferendis possimus qui, sed sint sit tenetur.</p>
-                            <h2 className="text-3xl mt-15">Tech Stack</h2>
+                    <div className="flex flex-col md:flex-row mt-10 items-start z-20">
+                        <div className="space-y-4 mb-10">
+                            <motion.p
+                                className="mt-8"
+                                initial={{opacity: 0, x: -100}}
+                                whileInView={{opacity: 1, x: 0}}
+                                viewport={{amount: 0.3}}
+                                transition={{duration: 2}}
+                            >
+                                I am a junior full stack developer focusing on building clean, scalable, and user-friendly applications.
+                                I primarily work with React on the frontend and Java Spring Boot on the backend, but I also enjoy exploring
+                                new technologies and frameworks to continuously expand my skill set.
+                            </motion.p>
+                            <motion.h2
+                                className="text-3xl mt-15"
+                                initial={{opacity: 0, x: -100}}
+                                whileInView={{opacity: 1, x: 0}}
+                                viewport={{amount: 0.3}}
+                                transition={{duration: 2}}
+                            >Tech Stack</motion.h2>
                             {/* Tech Stack */}
                             <div className="flex flex-row md:flex-col align-left mt-10">
                                 {/* Frontend */}
                                 <p>Frontend</p>
-                                <div className="flex flex-col md:flex-row items-center justify-start mb-10 mt-3 w-full">
-                                    <AnimatedTooltip items={techStack}/>
-                                </div>
+                                <motion.div
+                                    initial={{opacity: 0, x: -100}}
+                                    whileInView={{opacity: 1, x: 0}}
+                                    viewport={{amount: 0.3}}
+                                    transition={{duration: 2}}
+                                    className="flex flex-col md:flex-row items-center justify-start mb-10 mt-3 w-full">
+                                    <AnimatedTooltip items={frontTechStack}/>
+                                </motion.div>
                                 {/* Backend */}
                                 <p>Backend</p>
-                                <div className="flex flex-col md:flex-row items-center justify-start mb-10 mt-3 w-full">
-                                    <AnimatedTooltip items={techStack}/>
-                                </div>
+                                <motion.div
+                                    initial={{opacity: 0, x: -100}}
+                                    whileInView={{opacity: 1, x: 0}}
+                                    viewport={{amount: 0.3}}
+                                    transition={{duration: 2}}
+                                    className="flex flex-col md:flex-row items-center justify-start mb-10 mt-3 w-full">
+                                    <AnimatedTooltip items={backTechStack}/>
+                                </motion.div>
                                 {/* Other */}
                                 <p>Other</p>
-                                <div className="flex flex-col md:flex-row items-center justify-start mb-10 mt-3 w-full">
-                                    <AnimatedTooltip items={techStack}/>
-                                </div>
+                                <motion.div
+                                    initial={{opacity: 0, x: -100}}
+                                    whileInView={{opacity: 1, x: 0}}
+                                    viewport={{amount: 0.3}}
+                                    transition={{duration: 2}}
+                                    className="flex flex-col md:flex-row items-center justify-start mb-10 mt-3 w-full">
+                                    <AnimatedTooltip items={otherTechStack}/>
+                                </motion.div>
                             </div>
 
-                        </motion.div>
+                        </div>
                         {/* Model */}
                         <motion.div
                             className="w-1/2 m-auto"
@@ -139,7 +127,7 @@ const AboutMe = () => {
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
                     viewport={{amount: 1}}
-                    transition={{duration: 1.4}}
+                    transition={{duration: 1.6}}
                 >
                     My Values
                 </motion.h2>
@@ -157,7 +145,10 @@ const AboutMe = () => {
                             text="Fast Learner"
                             size={isMobile ? "sm" : "md"}
                         />
-                        <p className="dark:text-white text-black mt-4 text-center text-sm font-light">Teams plawsif shdbvi sidf  iushfi  uhfuio h u u ouh </p>
+                        <p className="dark:text-white text-black mt-4 text-center text-sm font-light"
+                        >
+                            One cannot just know everything. It is important however, to know how and where to look for answers. Having explored a large variety of technologies, I quickly adapt to new tools, frameworks, and challenges, turning knowledge into results.
+                        </p>
                     </motion.div>
                     {/* Card 2 */}
                     <motion.div
@@ -173,7 +164,10 @@ const AboutMe = () => {
                             colorLeft="oklch(64.5% 0.246 16.439)"
                             colorRight="oklch(60.6% 0.25 292.717)"
                         />
-                        <p className="dark:text-white text-black mt-4 text-center text-sm font-light">Teams plawsif shdbvi sidf  iushfi  uhfuio h u u ouh </p>
+                        <p className="dark:text-white text-black mt-4 text-center text-sm font-light"
+                        >I believe that for every problem, there is a solution. Approaching obstacles with creativity, logic and an open mind,
+                            will always lead us to efficient and practical solutions.
+                        </p>
                     </motion.div>
                     {/* Card 3 */}
                 <motion.div
@@ -189,7 +183,10 @@ const AboutMe = () => {
                             colorLeft="oklch(89.7% 0.196 126.665)"
                             colorRight="oklch(70.4% 0.14 182.503)"
                         />
-                        <p className="dark:text-white text-black mt-4 text-center text-sm font-light">Teams plawsif shdbvi sidf  iushfi  uhfuio h u u ouh </p>
+                        <p className="dark:text-white text-black mt-4 text-center text-sm font-light"
+                        >I collaborate openly, value feedback, and contribute to building strong, supportive teams. <br/><br/>
+                            <i>Individual commitment to a group effort—that is what makes a team work, a company work, a society work, a civilization work.</i> <br/> Vince Lombardi
+                        </p>
                     </motion.div>
                 </div>
 
