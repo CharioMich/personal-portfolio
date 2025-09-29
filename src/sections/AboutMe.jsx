@@ -17,6 +17,7 @@ import {AnimatedTooltip} from "@/components/AnimatedToolTip.jsx";
 
 // Tech Stack Icons Lists
 import {frontTechStack, backTechStack, otherTechStack} from "@/public/assets/techIconsLists.js";
+import SparklesText from "@/components/SparklesText.jsx";
 
 
 const AboutMe = () => {
@@ -123,16 +124,17 @@ const AboutMe = () => {
 
 
                 <motion.h2
-                    className="font-bold mt-4 text-2xl md:text-3xl text-center"
+                    className="font-bold mt-10 text-2xl md:text-3xl text-center"
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
                     viewport={{amount: 1}}
                     transition={{duration: 1.6}}
                 >
-                    My Values
+                    <SparklesText className="text-4xl">My Values</SparklesText>
+
                 </motion.h2>
                 {/* Hoverable Values */}
-                <div className="flex flex-wrap gap-4 mt-20">
+                <div className="flex flex-wrap gap-4 mt-15">
                     {/* Card 1 */}
                     <motion.div
                         className=" w-49 md:w-65 mx-auto p-4 relative"
@@ -147,7 +149,8 @@ const AboutMe = () => {
                         />
                         <p className="dark:text-white text-black mt-4 text-center text-sm font-light"
                         >
-                            One cannot just know everything. It is important however, to know how and where to look for answers. Having explored a large variety of technologies, I quickly adapt to new tools, frameworks, and challenges, turning knowledge into results.
+                            One cannot just know everything. It is important however, to know how and where to look for answers.
+                            Having explored a large variety of technologies, I quickly adapt to new tools, frameworks, and challenges, turning knowledge into results.
                         </p>
                     </motion.div>
                     {/* Card 2 */}
@@ -184,7 +187,7 @@ const AboutMe = () => {
                             colorRight="oklch(70.4% 0.14 182.503)"
                         />
                         <p className="dark:text-white text-black mt-4 text-center text-sm font-light"
-                        >I collaborate openly, value feedback, and contribute to building strong, supportive teams. <br/><br/>
+                        >I collaborate openly, welcome feedback, and love contributing to positive, supportive teams. <br/><br/>
                             <i>Individual commitment to a group effort—that is what makes a team work, a company work, a society work, a civilization work.</i> <br/> Vince Lombardi
                         </p>
                     </motion.div>
