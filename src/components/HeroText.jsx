@@ -7,13 +7,13 @@ const HeroText = () => {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        // Wait until component has mounted on the client
+        // Wait until component has mounted
         setMounted(true);
     }, []);
 
     if (!mounted) return null; // render nothing until ready
 
-    const words = ["Secure", "Modern", "Scalable"];
+    const words = ["Clean", "Modern", "Scalable"];
     return (
         <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
         {/*    DeskTop View    */}
@@ -22,7 +22,7 @@ const HeroText = () => {
                 initial={{opacity: 0, x: -50}}
                 animate={{opacity: 1, x: 0}}
                 transition={{delay: 1, duration: 2}}
-                className="text-5xl text-white font-extrabold">Hi I'm Charalampos</motion.h1>
+                className="text-5xl text-white font-extrabold">Hi, I'm Charalampos</motion.h1>
             <div className="flex flex-col items-start">
                 <motion.p
                     initial={{opacity: 0, x: -50}}
@@ -45,7 +45,7 @@ const HeroText = () => {
                     animate={{opacity: 1, x: 0}}
                     transition={{delay: 1.5, duration: 2}}
                     className="text-4xl font-bold text-neutral-300"
-                >Web Solutions</motion.p>
+                >Web Applications</motion.p>
             </div>
         </div>
         {/*    Mobile View     */}
@@ -56,7 +56,7 @@ const HeroText = () => {
                 transition={{delay: 1, duration: 2}}
                 className="text-4xl text-white font-extrabold">Hi, I'm Charalampos</motion.p>
             <div>
-                <p className="text-4xl font-black text-neutral-300">Building</p>
+                <p className="text-4xl font-black text-neutral-300">creating</p>
                 <div>
                     <FlipWords
                         words={words}
