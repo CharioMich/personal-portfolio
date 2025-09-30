@@ -5,6 +5,7 @@ import Projects from "./sections/Projects.jsx";
 import AboutMe from "./sections/AboutMe.jsx";
 import Contact from "./sections/Contact.jsx";
 import Footer from "./sections/Footer.jsx";
+import {Toaster} from "sonner";
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                 <Projects />
                 <Contact />
                 <Footer/>
+                <Toaster position="bottom-right" richColors />
             </div>
         </>
     )

@@ -23,7 +23,7 @@ const Footer = () => {
     ]
 
     return (
-        <footer className="flex justify-between items-center pointer-events-auto z-50 px-3 border-t-1
+        <footer className="flex justify-between items-center w-[91%] mx-auto pointer-events-auto z-50 px-3 border-t-1
                             border-black/60 dark:border-neutral-600 text-neutral-600 dark:text-neutral-600 h-15">
             <div>{year} &copy; C.Michalakis. All Rights Reserved</div>
             <div className="flex justify-end gap-3">
