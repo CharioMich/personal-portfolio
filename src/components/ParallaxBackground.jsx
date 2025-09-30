@@ -25,7 +25,7 @@ const ParallaxBackground = () => {
                 <div
                     className="absolute inset-0 w-full h-screen -z-50 shadow-md shadow-black"
                     style={{
-                        backgroundImage: `url(./src/public/assets/masayuki-koyama.jpg)`,
+                        backgroundImage: `url(/assets/masayuki-koyama.jpg)`,
                         backgroundPosition: `bottom`,
                         backgroundSize: `cover`,
                     }}
@@ -37,7 +37,7 @@ const ParallaxBackground = () => {
                     transition={{delay: 1, duration: 2}}
                     className="absolute inset-0 w-full h-screen -z-40"
                     style={{
-                        backgroundImage: `url(./src/public/assets/buildingLeft.png)`,
+                        backgroundImage: `url(/assets/buildingLeft.png)`,
                         backgroundPosition: `3% 50%`,
                         backgroundSize: isMobile ? '40%' : `18%`,
                         backgroundRepeat: `no-repeat`,
@@ -48,7 +48,7 @@ const ParallaxBackground = () => {
                 <motion.div
                     className="absolute inset-0 w-full h-screen -z-20"
                     style={{
-                        backgroundImage: `url(./src/public/assets/buildingRight.png)`,
+                        backgroundImage: `url(/assets/buildingRight.png)`,
                         backgroundPosition: `65% 42%`,
                         backgroundSize: isMobile ? '0%' : '20%',
                         backgroundRepeat: `no-repeat`,
@@ -58,7 +58,7 @@ const ParallaxBackground = () => {
                 <motion.div
                     className="absolute inset-0 w-full h-screen -z-20"
                     style={{
-                        backgroundImage: `url(./src/public/assets/buildingWelcome.png)`,
+                        backgroundImage: `url(/assets/buildingWelcome.png)`,
                         backgroundPosition: `105% 100%`,
                         backgroundSize: isMobile? '40%' :`15%`,
                         backgroundRepeat: `no-repeat`,
@@ -67,7 +67,7 @@ const ParallaxBackground = () => {
                 <motion.div
                     className="absolute inset-0 w-full h-screen -z-20"
                     style={{
-                        backgroundImage: `url(./src/public/assets/building1.png)`,
+                        backgroundImage: `url(/assets/building1.png)`,
                         backgroundPosition: `96% 130%`,
                         backgroundSize: isMobile? '40%' :`15%`,
                         backgroundRepeat: `no-repeat`,

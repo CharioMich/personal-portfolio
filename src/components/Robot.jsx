@@ -14,7 +14,7 @@ import { SkeletonUtils } from 'three-stdlib'
 
 export default function Robot(props) {
   const group = React.useRef()
-  const { scene, animations } = useGLTF('src/public/models/robot.gltf')
+  const { scene, animations } = useGLTF('/models/robot.gltf')
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   const { actions } = useAnimations(animations, group)
@@ -44,4 +44,4 @@ export default function Robot(props) {
   )
 }
 
-useGLTF.preload('src/public/models/robot.gltf')
+useGLTF.preload('/models/robot.gltf')

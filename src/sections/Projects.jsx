@@ -17,7 +17,7 @@ const Projects = () => {
                 <div>
                     <div className="w-full overflow-hidden">
                         <a href="https://github.com/CharioMich/myReserva-app" target="_blank">
-                            <MacbookScroll src="src/public/assets/projects_screenshots/myreserva.png" />
+                            <MacbookScroll src="/assets/projects_screenshots/myreserva.png" />
                         </a>
                     </div>
                     <div className="text-center m-auto mb-20 w-[48rem] p-5 bg-gradient-to-b from-reservabg to-red-300 dark:text-navy special-shadow" >
@@ -43,7 +43,7 @@ const Projects = () => {
                         transition={{duration: 2}}
                     >
                         <ThreeDCard
-                            imgSrc="src/public/assets/projects_screenshots/myreserva.png"
+                            imgSrc="/assets/projects_screenshots/myreserva.png"
                             title="myReserva Full-Stack App"
                             description="A full stack application, handling appointments/reservations for small businesses. Works with two completely different backend technologies."
                         >
@@ -60,7 +60,7 @@ const Projects = () => {
                     transition={{duration: 1}}
                 >
                     <ThreeDCard
-                        imgSrc="src/public/assets/projects_screenshots/teachersspring.webp"
+                        imgSrc="/assets/projects_screenshots/teachersspring.webp"
                         title="School App - Spring Boot API"
                         description="A RESTful api providing CRUD operations for teacher-users with JWT authentication"
                     >
@@ -76,7 +76,7 @@ const Projects = () => {
                     transition={{duration: 1}}
                 >
                     <ThreeDCard
-                        imgSrc="src/public/assets/projects_screenshots/node.webp"
+                        imgSrc="/assets/projects_screenshots/node.webp"
                         title="myReserva Node.js API"
                         description="A RESTful Node.js api providing CRUD operations for users with JWT authentication"
                     >
@@ -92,7 +92,7 @@ const Projects = () => {
                     transition={{duration: 1}}
                 >
                     <ThreeDCard
-                        imgSrc="src/public/assets/projects_screenshots/springreserva.webp"
+                        imgSrc="/assets/projects_screenshots/springreserva.webp"
                         title="Spring Boot API"
                         description="Spring Boot api for myReserva app, providing robust authentication and security."
                     >

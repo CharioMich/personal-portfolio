@@ -1,6 +1,6 @@
 import { Vortex } from "@/components/Vortex.jsx";
 import CometCardApplied from "@/components/CometCardApplied.jsx";
-import Phone from "@/public/models/phone/Phone.jsx";
+import Phone from "@/components/Phone.jsx";
 import Loader from "@/components/Loader.jsx";
 
 import {Suspense, useState} from "react";

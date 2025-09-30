@@ -25,7 +25,7 @@ export default function CometCardApplied({cardClass}) {
                             loading="lazy"
                             className="absolute inset-0 h-full w-full rounded-[16px] bg-[#000000] object-cover contrast-75"
                             alt="Invite background"
-                            src="src/public/assets/ciaran-o-brien-cut.webp"
+                            src="/assets/ciaran-o-brien-cut.webp"
                             style={{
                                 boxShadow: "rgba(0, 0, 0, 0.05) 0px 5px 6px 0px",
                                 opacity: 1,

@@ -2,7 +2,7 @@ import React, {Suspense, useRef} from "react";
 import { motion } from "motion/react"
 
 // 3D Model Imports
-import Robot from "../public/models/Robot.jsx"
+import Robot from "@/components/Robot.jsx"
 import { ContactShadows } from "@react-three/drei";
 import {Canvas, useFrame,} from "@react-three/fiber";
 // import {OrbitControls} from "@react-three/drei";
@@ -16,7 +16,7 @@ import GridBackground from "@/components/GridBackGround.jsx";
 import {AnimatedTooltip} from "@/components/AnimatedToolTip.jsx";
 
 // Tech Stack Icons Lists
-import {frontTechStack, backTechStack, otherTechStack} from "@/public/assets/techIconsLists.js";
+import {frontTechStack, backTechStack, otherTechStack} from "@/utils/techIconsLists.js";
 import SparklesText from "@/components/SparklesText.jsx";
 
 
