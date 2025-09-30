@@ -93,9 +93,9 @@ const Contact = () => {
                             className="flex flex-col md:flex-row z-40 h-[100%] min-w-[100%] items-center justify-around"
                             onMouseEnter={handleMovement}
                         >
-                            <div>
-                                <p className="text-xl font-mono pl-4">Thank you for coming this far!</p>
-                                <h1 className="text-6xl font-extrabold p-2 rounded-xl text-black bg-gray-200 dark:text-white dark:bg-transparent">
+                            <div className="p-4 text-black bg-gray-200 dark:text-white dark:bg-transparent rounded-xl">
+                                <p className="text-xl font-mono">Thank you for coming this far!</p>
+                                <h1 className="text-6xl font-extrabold animate-pulse">
                                     Let's get in touch!
                                 </h1>
                             </div>
