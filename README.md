@@ -9,7 +9,7 @@ This is a modern 3D style personal portfolio webpage built with React.js
 - [Vite](https://vitejs.dev/) – Fast bundler & dev server
 - [React.js](https://reactjs.org/) – Frontend library/framework
 - [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) & [Drei](https://github.com/pmndrs/drei) – 3D rendering
-- [Framer Motion](https://www.framer.com/motion/) – Animations
+- [React Motion](https://motion.dev/) – Animations
 - [Lucide Icons](https://lucide.dev/)
 - [Aceternity UI](https://ui.aceternity.com/) & [Magic UI](https://magicui.design/)
 - [Tailwind CSS](https://tailwindcss.com/)
@@ -20,7 +20,7 @@ This is a modern 3D style personal portfolio webpage built with React.js
 - 3D Elements and Parallax-like background
 - Beautiful <b>Aceternity</b> and <b>MagicUI</b> components
 - Responsive layout and navbar with Tailwind CSS and custom classes
-- Animations powered by <b>Framer Motion</b>
+- Animations powered by <b>Motion</b>
 - Beautiful images by cool artists (view credits)
 - AI generated images
 - Interactive layout
