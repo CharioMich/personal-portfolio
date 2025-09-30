@@ -94,7 +94,7 @@ const Projects = () => {
                     <ThreeDCard
                         imgSrc="/assets/projects_screenshots/springreserva.webp"
                         title="Spring Boot API"
-                        description="Spring Boot api for myReserva app, providing robust authentication and security."
+                        description="Spring Boot REST api for myReserva app, providing robust authentication and security."
                     >
                         <GitHubLinkComponent
                             url="https://github.com/CharioMich/my-reserva-spring-api"
