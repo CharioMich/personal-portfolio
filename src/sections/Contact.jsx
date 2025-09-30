@@ -53,6 +53,27 @@ const Contact = () => {
         setIsInside(false);
     }
 
+    const cardVariants = {
+        // This is the state when the card IS visible (isInside is true)
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 2,
+                duration: 1
+            }
+        },
+        // This is the state when the card IS hidden (isInside is false)
+        hidden: {
+            opacity: 0,
+            y: 50,
+            transition: {
+                // DISAPPEAR speed much faster (e.g., 0.2s)
+                duration: 0.5
+            }
+        }
+    };
+
     return (
         <section className="c-space min-h-screen w-full m-auto section-spacing">
             <h2 className="text-heading">Contact</h2>
@@ -63,36 +84,34 @@ const Contact = () => {
                     rangeY={800}
                     particleCount={200}
                     baseHue={120}
-                    className="flex flex-col px-2 md:px-10 py-4 w-full h-full m-suto"
+                    className="flex flex-col px-2 md:px-10 py-4 w-full h-full m-auto"
                 >
-
                     {/* Outer div */}
-                    <div className="flex flex-col md:flex-row mt-10 justify-between" onMouseLeave={handleReset}>
+                    <div className="flex flex-col md:flex-row z-30">
                         {/* Text */}
                         <div
-                            className="relative inset-0 w-full flex flex-col justify-around mt-16 md:mt-24 pointer-events-none z-40"
+                            className="flex flex-col md:flex-row z-40 h-[100%] min-w-[100%] items-center justify-around"
                             onMouseEnter={handleMovement}
                         >
-                            {/* Re-enable pointer events for clickable elements */}
-                            <div className="flex justify-start pointer-events-auto p-4">
-                                <h1 className="text-6xl font-extrabold p-2 rounded-xl text-black bg-gray-200 dark:text-white dark:bg-transparent animate-pulse">
+                            <div>
+                                <p className="text-xl font-mono pl-4">Thank you for coming this far!</p>
+                                <h1 className="text-6xl font-extrabold p-2 rounded-xl text-black bg-gray-200 dark:text-white dark:bg-transparent">
                                     Let's get in touch!
                                 </h1>
-                                {isInside && (
-                                    <motion.div
-                                        initial={{opacity: 0}}
-                                        whileInView={{opacity: 1}}
-                                        viewport={{amount: 1}}
-                                        transition={{delay: 0, duration: 1.6}}
-                                    >
-                                        <CometCardApplied/>
-                                    </motion.div>
-                                )}
                             </div>
+                            <motion.div
+                                initial="hidden"
+                                animate={isInside ? "visible" : "hidden"}
+                                variants={cardVariants}
+                                className={`w-fit z-30 mt-16 ${!isInside ? "pointer-events-none" : ""}`}
+                                onMouseEnter={handleMovement}
+                            >
+                                <CometCardApplied/>
+                            </motion.div>
                         </div>
                         {/* 3D Model */}
-                        <div className="absolute inset-0 z-20 m-auto" onMouseEnter={handleMovement}>
-                            <Canvas>
+                        <div className="absolute inset-0 z-20 m-auto" onMouseLeave={handleReset}>
+                            <Canvas onMouseLeave={handleReset}>
                                 <PerspectiveCamera makeDefault position={[0, 0, 50]} />
                                 <Suspense fallback={<Loader />}>
                                     <ambientLight intensity={0.5} color={"#00ffcc"} />
