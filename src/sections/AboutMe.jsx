@@ -54,74 +54,78 @@ const AboutMe = () => {
                             {/* Tech Stack */}
                             <div className="flex flex-row md:flex-col align-left mt-10">
                                 {/* Frontend */}
-                                <p>Frontend</p>
+                                {!isMobile && (<p>Frontend</p>)}
                                 <motion.div
                                     initial={{opacity: 0, x: -100}}
                                     whileInView={{opacity: 1, x: 0}}
                                     viewport={{amount: 0.3}}
                                     transition={{duration: 2}}
                                     className="flex flex-col md:flex-row items-center justify-start mb-10 mt-3 w-full">
+                                    {isMobile && <p className="mb-2 font-bold">Frontend</p>}
                                     <AnimatedTooltip items={frontTechStack}/>
                                 </motion.div>
                                 {/* Backend */}
-                                <p>Backend</p>
+                                {!isMobile && (<p>Backend</p>)}
                                 <motion.div
                                     initial={{opacity: 0, x: -100}}
                                     whileInView={{opacity: 1, x: 0}}
                                     viewport={{amount: 0.3}}
                                     transition={{duration: 2}}
                                     className="flex flex-col md:flex-row items-center justify-start mb-10 mt-3 w-full">
+                                    {isMobile && <p className="mb-2 font-bold">Backend</p>}
                                     <AnimatedTooltip items={backTechStack}/>
                                 </motion.div>
                                 {/* Other */}
-                                <p>Other</p>
+                                {!isMobile && (<p>Other</p>)}
                                 <motion.div
                                     initial={{opacity: 0, x: -100}}
                                     whileInView={{opacity: 1, x: 0}}
                                     viewport={{amount: 0.3}}
                                     transition={{duration: 2}}
                                     className="flex flex-col md:flex-row items-center justify-start mb-10 mt-3 w-full">
+                                    {isMobile && <p className="mb-2 font-bold">Other</p>}
                                     <AnimatedTooltip items={otherTechStack}/>
                                 </motion.div>
                             </div>
 
                         </div>
                         {/* Model */}
-                        <motion.div
-                            className="w-1/2 m-auto"
-                            initial={{opacity: 0, x: 400}}
-                            whileInView={{opacity: 1, x: 0}}
-                            viewport={{amount: 0.2}}
-                            transition={{duration: 2}}
-                        >
-                            <Canvas camera={{ position: [0, 5, 20], fov: 50 }}>
-                                <Suspense fallback={<Loader />}>
-                                    <ambientLight intensity={7} />
-                                    <directionalLight position={[0, 10, 5]} intensity={7} />
-                                    <directionalLight position={[-10, 10, 5]} intensity={2} />
-                                    {/*<OrbitControls enableZoom={false}/>*/}
-                                    <Float
-                                        speed={3}
-                                        rotationIntensity={1}
-                                        floatIntensity={2}
-                                    >
-                                        <Robot ref={robotRef} />
-                                        <Rig target={robotRef} />
-                                    </Float>
-                                    {/* Background shadow under robot */}
-                                    <ContactShadows
-                                        position={[0, -5, 0]}
-                                        opacity={1.2}
-                                        scale={70}
-                                        blur={0.5}
-                                        far={30}
-                                    />
-                                </Suspense>
-                            </Canvas>
-                        </motion.div>
+                        {!isMobile && (
+                            <motion.div
+                                className="w-1/2 m-auto"
+                                initial={{opacity: 0, x: 400}}
+                                whileInView={{opacity: 1, x: 0}}
+                                viewport={{amount: 0.2}}
+                                transition={{duration: 2}}
+                            >
+                                <Canvas camera={{ position: [0, 5, 20], fov: 50 }}>
+                                    <Suspense fallback={<Loader />}>
+                                        <ambientLight intensity={7} />
+                                        <directionalLight position={[0, 10, 5]} intensity={7} />
+                                        <directionalLight position={[-10, 10, 5]} intensity={2} />
+                                        {/*<OrbitControls enableZoom={false}/>*/}
+                                        <Float
+                                            speed={3}
+                                            rotationIntensity={1}
+                                            floatIntensity={2}
+                                        >
+                                            <Robot ref={robotRef} />
+                                            <Rig target={robotRef} />
+                                        </Float>
+                                        {/* Background shadow under robot */}
+                                        <ContactShadows
+                                            position={[0, -5, 0]}
+                                            opacity={1.2}
+                                            scale={70}
+                                            blur={0.5}
+                                            far={30}
+                                        />
+                                    </Suspense>
+                                </Canvas>
+                            </motion.div>
+                        )}
                     </div>
                 </GridBackground>
-
 
                 <motion.h2
                     className="font-bold mt-10 text-2xl md:text-3xl text-center"
@@ -131,7 +135,6 @@ const AboutMe = () => {
                     transition={{duration: 1.6}}
                 >
                     <SparklesText className="text-4xl">My Values</SparklesText>
-
                 </motion.h2>
                 {/* Hoverable Values */}
                 <div className="flex flex-wrap gap-4 mt-15">
