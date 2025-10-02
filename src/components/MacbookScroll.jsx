@@ -167,7 +167,7 @@ export const Trackpad = () => {
 export const Keypad = () => {
     return (
         <div
-            className="mx-1 h-full [transform:translateZ(0)] rounded-md bg-[#050505] p-1 [will-change:transform]">
+            className="mx-1 h-full [transform:translateZ(0)] rounded-md bg-[#050505] p-1">
             {/* First Row */}
             <div className="mb-[2px] flex w-full shrink-0 gap-[2px]">
                 <KBtn

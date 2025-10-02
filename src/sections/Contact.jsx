@@ -1,5 +1,4 @@
-import { Vortex } from "@/components/Vortex.jsx";
-import CometCardApplied from "@/components/CometCardApplied.jsx";
+// import { Vortex } from "@/components/Vortex.jsx";
 import Phone from "@/components/Phone.jsx";
 import Loader from "@/components/Loader.jsx";
 
@@ -9,6 +8,8 @@ import { Canvas } from "@react-three/fiber";
 import { a, useSpring } from '@react-spring/three';
 
 import { motion } from "motion/react";
+import PhoneCard from "@/components/PhoneCard.jsx";
+import {StarsBackground} from "@/components/StarsBackground.jsx";
 
 
 const Contact = () => {
@@ -24,8 +25,8 @@ const Contact = () => {
         position: initialPosition,
         rotation: initialRotation,
         config: {
-            tension: 70, // Adjust for a bouncier/stiffer effect
-            friction: 50   // Adjust for how quickly it slows down
+            tension: 170, // Adjust for a bouncier/stiffer effect
+            friction: 46   // Adjust for how quickly it slows down
         }
     }));
 
@@ -59,8 +60,8 @@ const Contact = () => {
             opacity: 1,
             y: 0,
             transition: {
-                delay: 2,
-                duration: 1
+                delay: 1,
+                duration: 0.7
             }
         },
         // This is the state when the card IS hidden (isInside is false)
@@ -75,38 +76,43 @@ const Contact = () => {
     };
 
     return (
-        <section className="c-space min-h-screen w-full m-auto section-spacing">
+        <section id="contact" className="c-space relative min-h-screen w-full m-auto section-spacing">
             <h2 className="text-heading">Contact</h2>
             <hr className="border-gray-300 dark:border-gray-500 mt-10" />
-            <div id="contact" className="w-full relative inset-0 h-screen">
-                <Vortex
-                    backgroundColor="transparent"
-                    rangeY={800}
-                    particleCount={200}
-                    baseHue={120}
-                    className="flex flex-col px-2 md:px-10 py-4 w-full h-full m-auto"
-                >
+            <div className="w-full relative inset-0 h-screen">
+                {/*<Vortex*/}
+                {/*    backgroundColor="transparent"*/}
+                {/*    rangeY={800}*/}
+                {/*    particleCount={200}*/}
+                {/*    baseHue={120}*/}
+                {/*    className="flex flex-col w-full h-full m-auto"*/}
+                {/*>*/}
+                <StarsBackground/>
                     {/* Outer div */}
-                    <div className="flex flex-col md:flex-row z-30">
+                    <div className="flex flex-col items-center h-full justify-around md:flex-row z-30"
+                        onMouseEnter={handleMovement}
+                        onMouseLeave={handleReset}
+                    >
+
                         {/* Text */}
                         <div
-                            className="flex flex-col md:flex-row z-40 h-[100%] min-w-[100%] items-center justify-around"
-                            onMouseEnter={handleMovement}
+                            className="flex flex-col w-full md:flex-row z-30 items-center justify-around"
                         >
-                            <div className="p-4 text-black bg-gray-200 dark:text-white dark:bg-transparent rounded-xl">
-                                <p className="text-xl font-mono">Thank you for coming this far!</p>
-                                <h1 className="text-6xl font-extrabold animate-pulse">
+                            <div className="p-4 light:triple-shadow rounded-xl bg-gray-200/70 text-black dark:text-white dark:bg-transparent">
+                                <p className="text-xl dark:text-white font-mono p-2 w-fit">Thank you for coming this far!</p>
+                                <h1 className="text-6xl font-extrabold">
                                     Let's get in touch!
                                 </h1>
                             </div>
+                            {/*PhoneCard*/}
                             <motion.div
                                 initial="hidden"
                                 animate={isInside ? "visible" : "hidden"}
                                 variants={cardVariants}
-                                className={`w-fit z-30 mt-16 ${!isInside ? "pointer-events-none" : ""}`}
+                                className={`z-30 max-w-md max-h-md motion-element ${!isInside ? "pointer-events-none" : ""}`}
                                 onMouseEnter={handleMovement}
                             >
-                                <CometCardApplied/>
+                                <PhoneCard/>
                             </motion.div>
                         </div>
                         {/* 3D Model */}
@@ -126,7 +132,7 @@ const Contact = () => {
                             </Canvas>
                         </div>
                     </div>
-                </Vortex>
+                {/*</Vortex>*/}
             </div>
 
         </section>

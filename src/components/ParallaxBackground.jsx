@@ -35,7 +35,7 @@ const ParallaxBackground = () => {
                     initial={{opacity: 0.5, x: -50}}
                     animate={{opacity: 1, x: 0}}
                     transition={{delay: 1, duration: 2}}
-                    className="absolute inset-0 w-full h-screen -z-40"
+                    className="absolute inset-0 w-full h-screen -z-40 motion-buildings"
                     style={{
                         backgroundImage: `url(/assets/buildingLeft.png)`,
                         backgroundPosition: `3% 50%`,
@@ -46,7 +46,7 @@ const ParallaxBackground = () => {
 
                 {/* Right floating building */}
                 <motion.div
-                    className="absolute inset-0 w-full h-screen -z-20"
+                    className="absolute inset-0 w-full h-screen -z-20 motion-buildings"
                     style={{
                         backgroundImage: `url(/assets/buildingRight.png)`,
                         backgroundPosition: `65% 42%`,
@@ -56,7 +56,7 @@ const ParallaxBackground = () => {
                     }}/>
                 {/* Right popping up buildings */}
                 <motion.div
-                    className="absolute inset-0 w-full h-screen -z-20"
+                    className="absolute inset-0 w-full h-screen -z-20 motion-buildings"
                     style={{
                         backgroundImage: `url(/assets/buildingWelcome.png)`,
                         backgroundPosition: `105% 100%`,

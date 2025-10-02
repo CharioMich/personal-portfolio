@@ -1,4 +1,4 @@
-import {FlipWords} from "./FlipWords.jsx";
+import FlipWords from "./FlipWords.jsx";
 import {motion} from "motion/react";
 import {useEffect, useState} from "react";
 
@@ -60,7 +60,7 @@ const HeroText = () => {
                 <div>
                     <FlipWords
                         words={words}
-                        className="font-black text-white text-6xl"/>
+                        className="font-black text-white text-6xl motion-element"/>
                     <p className="text-4xl font-black text-neutral-300">Web Applications</p>
                 </div>
             </div>

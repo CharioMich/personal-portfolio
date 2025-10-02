@@ -32,8 +32,6 @@ const Projects = () => {
                     </div>
                 </div>
             )}
-
-            {/*  More Projects  */}
             <div className="flex flex-row flex-wrap gap-6 items-center justify-center mt-30">
                 {!isLaptop && (
                     <motion.div

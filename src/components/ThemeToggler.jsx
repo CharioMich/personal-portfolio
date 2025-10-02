@@ -29,7 +29,8 @@ export const ThemeToggler = () => {
     return (
         <button
             onClick={toggleDarkMode}
-            className={cn("rounded-lg p-2 z-80 shadow-sm shadow-gray-700 dark:shadow-white h-auto hover:shadow-[0_3px_10px_rgb(255,255,255)] transition-shadow duration-400")}
+            className={cn(["rounded-lg p-2 z-80 border border-gray-200 shadow-md dark:shadow-sm shadow-gray-600 dark:shadow-white h-auto ",
+                "hover:shadow-[0_3px_10px_rgb(255,255,255)] transition-shadow duration-400 cursor-pointer"])}
         >
             {isDarkMode
                 ? <Sun className="h-5 w-5 text-gray-200"/>

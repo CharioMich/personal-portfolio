@@ -1,79 +1,3 @@
-// import { Menu, X} from "lucide-react";
-// import {motion} from "motion/react"
-// import {useState} from "react";
-// import {ThemeToggler} from "../components/ThemeToggler.jsx";
-//
-//
-// function Navigation() {
-//     return (
-//         <ul className="nav-ul">
-//             <li className="nav-li">
-//                 <a href="#hero" className="nav-link">Home</a>
-//             </li>
-//             <li className="nav-li">
-//                 <a href="#about" className="nav-link">About</a>
-//             </li>
-//             <li className="nav-li">
-//                 <a href="#projects" className="nav-link">Projects</a>
-//             </li>
-//             <li className="nav-li">
-//                 <a href="#contact" className="nav-link">Contact</a>
-//             </li>
-//         </ul>
-//     );
-// }
-//
-//
-// const Navbar = () => {
-//
-//     const [isOpen, setIsOpen] = useState(false);
-//
-//     return (
-//         <div className="fixed inset-x-0 z-20 w-full p-2 backdrop-blur-sm bg-transparent">
-//             <div className="mx-auto c-space max-w-7xl">
-//                 <div className="flex items-center justify-between py-2 sm:py-0">
-//                     <div>
-//                         <ThemeToggler />
-//                         {/*<a*/}
-//                         {/*    href="/"*/}
-//                         {/*    className="text-xl ml-4 font-bold transition-colors text-neutral-400 hover:text-white"*/}
-//                         {/*>Babis</a>*/}
-//                     </div>
-//
-//                     <button
-//                         onClick={() => setIsOpen(!isOpen)}
-//                         className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
-//                     >
-//                         {isOpen
-//                             ? <X />
-//                             : <Menu />
-//                         }
-//                     </button>
-//                     <nav className="hidden sm:flex">
-//                         <Navigation />
-//                     </nav>
-//                 </div>
-//             </div>
-//             {isOpen && (
-//                 <motion.div
-//                     className="block overflow-hidden text-center sm:hidden"
-//                     initial={{opacity: 0, y: -20}}
-//                     animate={{opacity: 1, y: 0}}
-//                     style={{maxHeight: '100vh'}}
-//                     transition={{duration: 1}}
-//                 >
-//                     <nav className="pb-5">
-//                         <Navigation />
-//                     </nav>
-//                 </motion.div>
-//             )}
-//         </div>
-//     )
-// }
-//
-// export default Navbar;
-
-// components/Navbar.jsx
 import { Menu, X } from "lucide-react";
 import { motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
@@ -94,7 +18,10 @@ function Navigation({ activeSection, onLinkClick }) {
                     <a
                         href={`#${l.id}`}
                         className={`nav-link ${activeSection === l.id ? "active" : ""}`}
-                        onClick={() => onLinkClick?.()}
+                        onClick={() => {
+                            setActiveSection(l.id);
+                            onLinkClick?.();
+                        }}
                     >
                         {l.label}
                     </a>
@@ -117,7 +44,7 @@ export default function Navbar() {
         const observerOptions = {
             root: null,
             rootMargin: `-${navHeight}px 0px 0px 0px`, // offset for fixed navbar
-            threshold: 0, // trigger as soon as the top of section enters viewport
+            threshold: 0.1, // trigger as soon as the top of section enters viewport
         };
 
         // Create observer
@@ -145,7 +72,7 @@ export default function Navbar() {
     };
 
     return (
-        <div ref={navRef} className="fixed inset-x-0 z-200 w-full p-2 backdrop-blur-sm bg-transparent">
+        <div ref={navRef} className="fixed inset-x-0 z-200 w-full p-2 backdrop-blur-sm bg-gray-200/20 dark:bg-transparent">
             <div className="mx-auto c-space max-w-7xl">
                 <div className="flex items-center justify-between py-2 sm:py-0">
                     <div>
@@ -161,7 +88,11 @@ export default function Navbar() {
                     </button>
 
                     <nav className="hidden sm:flex">
-                        <Navigation activeSection={activeSection} onLinkClick={closeAndBlur} />
+                        <Navigation
+                            activeSection={activeSection}
+                            setActiveSection={setActiveSection}
+                            onLinkClick={closeAndBlur}
+                        />
                     </nav>
                 </div>
             </div>

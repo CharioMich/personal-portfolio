@@ -50,7 +50,8 @@ const EvervaultCard = ({
         >
             <div
                 onMouseMove={onMouseMove}
-                className="group/card rounded-full relative overflow-hidden bg-gray-50 dark:bg-transparent flex items-center justify-center w-full h-full shadow-lg shadow-gray-600/20"
+                className="group/card rounded-full relative overflow-hidden bg-gray-50 dark:bg-transparent
+                 flex items-center justify-center w-full h-full shadow-lg shadow-gray-300/40"
             >
                 <CardPattern
                     mouseX={mouseX}
