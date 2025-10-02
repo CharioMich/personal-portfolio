@@ -9,7 +9,7 @@ export function ThreeDCard({children, imgSrc, title, description}) {
     return (
         <CardContainer>
             <CardBody
-                className="bg-gray-50 relative group/card hover:shadow-2xl hover:shadow-slate-900/[0.3] dark:hover:shadow-2xl dark:hover:shadow-cyan-400/[0.3] dark:bg-black dark:border-white/[0.2] border-black/[0.3] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                className="bg-gray-50 relative group/card hover:shadow-2xl hover:shadow-slate-800/[0.6] dark:hover:shadow-2xl dark:hover:shadow-violet-400/[0.3] dark:bg-black dark:border-white/[0.2] border-black/[0.3] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
                 <CardItem
                     translateZ="50"
                     className="text-xl font-bold text-neutral-600 dark:text-white">
