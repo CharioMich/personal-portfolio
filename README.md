@@ -30,3 +30,4 @@ This is a modern 3D style personal portfolio webpage built with React.js
 - "Neon Signs" Comet card [image](https://unsplash.com/photos/building-signage-turned-on-during-nighttime-ITu-L0FuPPk) by "Ciaran O'Brien".
 - Phone Booth 3D Model by "Mouch". Find it [here](https://sketchfab.com/3d-models/phone-booth-94fca8c5ac9f4974bd4a02e8f571f493).
 - Robot 3D Model by "Daniel Gryningstjerna". Find it [here](https://sketchfab.com/3d-models/robot-c46bd21f1d284ae0b4bda7ac577448c2).
+- <a target="_blank" href="https://icons8.com/icon/2CZ4L7bKk5lE/github">GitHub</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
