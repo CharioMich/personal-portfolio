@@ -33,6 +33,16 @@ body {
     overflow-x: hidden;
 }
 
+/* Optimization for browsers like Firefox which don't run WebGL/WebGPU with full acceleration  */
+.motion-element {
+    will-change: transform, opacity;
+}
+
+.motion-buildings {
+    will-change: transform;
+}
+
+
 canvas {
     height: 100vh !important;
 }
@@ -81,8 +91,8 @@ canvas {
 }
 
 .active {
-    /*color: white !important;*/
     @apply text-black dark:text-white;
+    text-shadow: 0 0 15px white, 0 0 15px white;
 }
 
 /* Button Components */
@@ -92,4 +102,8 @@ canvas {
 
 .special-shadow {
     box-shadow: 0 20px 15px 15px theme('colors.red.300');
+}
+
+.triple-shadow {
+    text-shadow: 0 0 55px white, 0 0 55px white, 0 0 55px white;
 }
