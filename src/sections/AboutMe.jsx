@@ -5,19 +5,19 @@ import { motion } from "motion/react"
 import Robot from "@/components/Robot.jsx"
 // import { ContactShadows } from "@react-three/drei";
 import {Canvas, useFrame,} from "@react-three/fiber";
-import {OrbitControls} from "@react-three/drei";
+// import {OrbitControls} from "@react-three/drei";
 // import {Float} from "@react-three/drei";
 
 import Loader from "../components/Loader.jsx";
 import {useMediaQuery} from "react-responsive";
-// import {easing} from "maath";
+import {easing} from "maath";
 import EvervaultCard from "../components/EvervaultCard.jsx";
 import GridBackground from "@/components/GridBackGround.jsx";
 import {AnimatedTooltip} from "@/components/AnimatedToolTip.jsx";
-
+import SparklesText from "@/components/SparklesText.jsx";
 // Tech Stack Icons Lists
 import {frontTechStack, backTechStack, otherTechStack} from "@/utils/techIconsLists.js";
-import SparklesText from "@/components/SparklesText.jsx";
+
 
 
 const AboutMe = () => {
@@ -43,7 +43,6 @@ const AboutMe = () => {
                                 I am a junior full stack developer focusing on building clean, scalable, and user-friendly applications.
                                 I primarily work with React on the frontend and Java Spring Boot on the backend, but I also enjoy exploring
                                 new technologies and frameworks to continuously expand my skill set.
-                                <p className="animate-pulse mt-3 text-sm">Don't be shy, move the Robot.</p>
                             </motion.p>
                             <motion.h2
                                 className="text-3xl mt-12"
@@ -92,7 +91,7 @@ const AboutMe = () => {
                         {/* Model */}
                         {!isMobile && (
                             <motion.div
-                                className="w-1/2 m-auto"
+                                className="m-auto inset-0 w-1/2"
                                 initial={{opacity: 0, x: 400}}
                                 whileInView={{opacity: 1, x: 0}}
                                 viewport={{amount: 0.2}}
@@ -101,19 +100,20 @@ const AboutMe = () => {
                                 <Canvas camera={{ position: [0, 5, 20], fov: 50 }}>
                                     <Suspense fallback={<Loader />}>
                                         <ambientLight intensity={7} />
-                                        <directionalLight position={[10, 0, 100]} intensity={7} />
+                                        <directionalLight position={[10, 0, 100]} intensity={6} />
                                         {/*<directionalLight position={[-10, 10, 5]} intensity={2} />*/}
-                                        <OrbitControls
-                                            enableZoom={false}
-                                            enableDamping={true}
-                                            dampingFactor={0.08}    // smooth but not too sluggish
-                                            rotateSpeed={0.9}       // slightly reduced sensitivity for Firefox
-                                            panSpeed={0.5}          // steady panning
-                                            // zoomSpeed={0.7}
-                                            // minDistance={2}
-                                            // maxDistance={40}
-                                        />
+                                        {/*<OrbitControls*/}
+                                        {/*    enableZoom={false}*/}
+                                        {/*    enableDamping={true}*/}
+                                        {/*    dampingFactor={0.08}    // smooth but not too sluggish*/}
+                                        {/*    rotateSpeed={0.9}       // slightly reduced sensitivity for Firefox*/}
+                                        {/*    panSpeed={0.5}          // steady panning*/}
+                                        {/*    // zoomSpeed={0.7}*/}
+                                        {/*    // minDistance={2}*/}
+                                        {/*    // maxDistance={40}*/}
+                                        {/*/>*/}
                                         <Robot ref={robotRef} />
+                                        <Rig target={robotRef} />
                                     </Suspense>
                                 </Canvas>
                             </motion.div>
@@ -195,22 +195,22 @@ const AboutMe = () => {
 }
 
 // Make model follow mouse movement
-// function Rig({ target }) {
-//     return useFrame((state, delta) => {
-//         if (target.current) {
-//             // Smooth rotation based on mouse
-//             easing.dampE(
-//                 target.current.rotation,
-//                 [
-//                     -state.mouse.y / 2,   // X rotation
-//                     state.mouse.x / 3,  // Y rotation
-//                     0                   // Z rotation
-//                 ],
-//                 0.5,
-//                 delta
-//             );
-//         }
-//     });
-// }
+function Rig({ target }) {
+    return useFrame((state, delta) => {
+        if (target.current) {
+            // Smooth rotation based on mouse
+            easing.dampE(
+                target.current.rotation,
+                [
+                    -state.mouse.y / 2,   // X rotation
+                    state.mouse.x ,  // Y rotation
+                    0                   // Z rotation
+                ],
+                0.5,
+                delta
+            );
+        }
+    });
+}
 
 export default AboutMe;
