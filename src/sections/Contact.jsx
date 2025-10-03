@@ -96,7 +96,7 @@ const Contact = () => {
                             <div className="flex flex-col items-center gap-4 font-bold">
                                 {/*<p className="text-2xl dark:text-white font-mono p-2 w-fit">Thank you for coming this far!</p>*/}
                                 <div
-                                    className="flex flex-col text-2xl font-bold items-center gap-6 w-fit"
+                                    className="flex flex-col mt-6 md:mt-1 text-3xl font-bold items-center gap-6 w-fit"
                                 >
                                     <p>Check out my GitHub profile!</p>
                                     <a
