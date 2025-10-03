@@ -20,7 +20,7 @@ const Projects = () => {
                             <MacbookScroll src="/assets/projects_screenshots/myreserva.png" />
                         </a>
                     </div>
-                    <div className="text-center m-auto mb-20 w-[48rem] p-5 bg-gradient-to-b from-reservabg to-red-300 dark:text-navy special-shadow" >
+                    <div className="text-center m-auto mb-20 w-[45rem] p-5 bg-gradient-to-b from-reservabg to-red-300 dark:text-navy special-shadow" >
                         <h2 className="text-2xl font-black mb-2 text-gray-200">Project Description</h2>
                         <strong>myReserva</strong> is an application designed to manage appointments and reservations for small businesses.
                         It stands out as my most significant project so far, with a unique architecture that integrates two distinct backend technologies:

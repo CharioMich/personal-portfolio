@@ -113,13 +113,13 @@ export const Lid = ({ scaleX, scaleY, rotate, translate, src }) => (
         {/* Project Image overlayed on screen */}
         <motion.div
             style={{ scaleX, scaleY, rotateX: rotate, translateY: translate }}
-            className="absolute bottom-0 left-0 h-[12rem] w-[32rem] rounded-2xl bg-[#010101] p-2"
+            className="absolute bottom-0 left-4 h-[12rem] w-[30rem] rounded-2xl bg-[#010101] p-2"
         >
             <div className="absolute inset-0 rounded-lg" />
             <img
                 src={src}
                 alt="Project Image"
-                className="absolute inset-0 h-[13-rem] w-[32rem] rounded-lg object-contain object-top -translate-y-22"
+                className="absolute inset-0 h-[13-rem] w-[32rem] rounded-lg object-contain object-top -translate-y-20"
             />
         </motion.div>
     </div>
