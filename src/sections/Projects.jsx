@@ -76,7 +76,7 @@ const Projects = () => {
                     <ThreeDCard
                         imgSrc="/assets/projects_screenshots/node.webp"
                         title="myReserva Node.js API"
-                        description="A RESTful Node.js/Express api providing CRUD operations for users with JWT authentication"
+                        description="A RESTful Node.js + Express api providing CRUD operations for users with JWT authentication"
                     >
                         <GitHubLinkComponent
                             url="https://github.com/CharioMich/my-reserva-api"
