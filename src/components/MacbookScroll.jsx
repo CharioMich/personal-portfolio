@@ -46,7 +46,7 @@ export const MacbookScroll = ({ src, showGradient, title, badge }) => {
     return (
         <div
             ref={ref}
-            className="flex min-h-[200vh] flex-col items-center justify-start py-0 scale-35 sm:scale-50 md:scale-100 md:py-20"
+            className="flex min-h-[100vh] flex-col items-center justify-start py-0 scale-35 sm:scale-50 md:scale-100 md:py-20"
         >
             <motion.div
                 style={{ translateY: textTransform, opacity: textOpacity }}
