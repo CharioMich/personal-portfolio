@@ -74,6 +74,22 @@ const Projects = () => {
                     transition={{duration: 1}}
                 >
                     <ThreeDCard
+                        imgSrc="/assets/projects_screenshots/cms-screen.webp"
+                        title="CMS Full-Stack App"
+                        description="Smart Clinic Management System with two databases, featuring Thymeleaf templates (MVC) and RESTful APIs. "
+                    >
+                        <GitHubLinkComponent
+                            url="https://github.com/CharioMich/java-database-capstone"
+                        />
+                    </ThreeDCard>
+                </motion.div>
+                <motion.div
+                    initial={{opacity: 0, x: -200}}
+                    whileInView={{opacity: 1, x: 0}}
+                    viewport={{amount: 0.3}}
+                    transition={{duration: 1}}
+                >
+                    <ThreeDCard
                         imgSrc="/assets/projects_screenshots/node.webp"
                         title="myReserva Node.js API"
                         description="A RESTful Node.js + Express api providing CRUD operations for users with JWT authentication"
@@ -84,8 +100,8 @@ const Projects = () => {
                     </ThreeDCard>
                 </motion.div>
                 <motion.div
-                    initial={{opacity: 0, y: 100}}
-                    whileInView={{opacity: 1, y: 0}}
+                    initial={{opacity: 0, x: 200}}
+                    whileInView={{opacity: 1, x: 0}}
                     viewport={{amount: 0.1}}
                     transition={{duration: 1}}
                 >
