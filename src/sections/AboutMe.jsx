@@ -184,8 +184,8 @@ const AboutMe = () => {
                             colorRight="oklch(70.4% 0.14 182.503)"
                         />
                         <p className="dark:text-white text-black mt-4 text-center font-light"
-                        >I collaborate openly, welcome feedback, and love contributing to positive, supportive teams. <br/><br/>
-                            <i>Individual commitment to a group effort—that is what makes a team work, a company work, a society work, a civilization work.</i> <br/> Vince Lombardi
+                        >I collaborate openly, welcome feedback, and love contributing to positive, multicultural and supportive teams. <br/><br/>
+                            <i>Alone we can do so little, together we can do so much.</i> <br/> Helen Keller
                         </p>
                     </motion.div>
                 </div>
