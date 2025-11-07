@@ -185,7 +185,7 @@ const AboutMe = () => {
                         />
                         <p className="dark:text-white text-black mt-4 text-center font-light"
                         >I collaborate openly, welcome feedback, and love contributing to positive, multicultural and supportive teams. <br/><br/>
-                            <i>Alone we can do so little, together we can do so much.</i> <br/> Helen Keller
+                            <i>Alone we can do so little, together we can do so much.</i> — Helen Keller
                         </p>
                     </motion.div>
                 </div>
